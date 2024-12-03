@@ -7,6 +7,9 @@ body {
     padding: 0; /* внутренний отступ */
 
 }
+body, html {
+    overflow-x: hidden; /* Отключение горизонтального скроллинга */
+}
 
 /* Навигация */
 .navbar {
@@ -141,6 +144,7 @@ body {
     background-image: url('seoul-bg.JPG');
     background-size: cover; /* Масштабирует фоновое изображение обрезая при необходимости */
     background-position: center; /* Центрирует фоновое изображение относительно элемента */
+    overflow: hidden; /* предотвращение выхода за пределы */
     position: absolute; /* элемент независимо от других элементов на странице относительно position*/
     top: 0;
     left: 0;
