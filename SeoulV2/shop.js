@@ -1,18 +1,18 @@
 async function getResponce() {
-    let response = await fetch("shop.json");
-    let content = await response.text();
-    content = JSON.parse(content);
+    let response = await fetch("shop.json"); // Запрос для получения данных, код дожидается окончания запроса до перехода к следующей строке
+    let content = await response.text(); // Извлекается текст
+    content = JSON.parse(content); // Объект становится массивом, а не списком
 
-    // Сохраним товары в массив для дальнейшего фильтрации
+    // Сохранение товаров для дальнейшего фильтрации
     const allProducts = content;
 
     // Функция для отображения товаров
     function displayProducts(products) {
-        let node_for_insert = document.getElementById("node_for_insert");
-        node_for_insert.innerHTML = ""; // Очищаем текущий список товаров
-        products.forEach((product) => {
+        let node_for_insert = document.getElementById("node_for_insert"); // Ищет строку с таким id
+        node_for_insert.innerHTML = ""; // Очищает текущий список товаров
+        products.forEach((product) => { // Создает html код каждой карточки и возвращает
             node_for_insert.innerHTML += `
-<li style="width: 210px" class="d-flex flex-column m-1 p-1 border bg-body">
+<li style="width: 210px" class="d-flex flex-column m-1 p-1 border bg-body"> 
     <img style="width: 180px" class="align-self-center" src="${product.img}" alt="${product.name}">
     <h5 class="card-title">${product.name}</h5>
     <p class="product-description">${product.description}</p> <!-- Описание товара -->
@@ -31,24 +31,14 @@ async function getResponce() {
     const searchInput = document.getElementById("search-input");
     const searchButton = document.getElementById("search-button");
 
-    searchButton.addEventListener("click", () => {
-        const query = searchInput.value.toLowerCase().trim();
-        const filteredProducts = allProducts.filter(product => 
+    searchButton.addEventListener("click", () => { // При нажатии на кнопку выполнится код
+        const query = searchInput.value.toLowerCase().trim(); // Получает текст пользователя, приводят к нижнему регистру и удаляет пробелы
+        const filteredProducts = allProducts.filter(product =>  // Создание отфильтрованного массива, проверяет, чтобы товар содержал слова, введенные пользователем
             product.name.toLowerCase().includes(query)
         );
         displayProducts(filteredProducts); // Отображаем только найденные товары
     });
 
-    // Обновляем список товаров при нажатии Enter в поле ввода
-    searchInput.addEventListener("keypress", (event) => {
-        if (event.key === "Enter") {
-            const query = searchInput.value.toLowerCase().trim();
-            const filteredProducts = allProducts.filter(product => 
-                product.name.toLowerCase().includes(query)
-            );
-            displayProducts(filteredProducts); // Отображаем только найденные товары
-        }
-    });
 }
 
 getResponce();
