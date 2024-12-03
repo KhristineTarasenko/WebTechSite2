@@ -7,14 +7,7 @@ body {
     padding: 0; /* внутренний отступ */
 
 }
-body, html {
-    overflow-x: hidden; /* Отключение горизонтального скроллинга */
-}
-*,
-*::before,
-*::after {
-    box-sizing: border-box; /* Включаем для всех элементов, чтобы учитывать отступы и границы в общей ширине */
-}
+
 .hero, .about, .contacts {
     overflow: hidden;
 }
@@ -195,27 +188,38 @@ body, html {
 
 /* Карточки секций */
 .seoul-info-section {
-    display: flex; /* Преобразует элемент в гибкий контейнер */
-    justify-content: center; /* по горизонтальной оси */
-    gap: 1.5em; /*  промежуток между соседними элементами в 1.5em */
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
     margin-top: 2em;
+    flex-wrap: wrap; /* Добавим перенос элементов на мобильных устройствах */
 }
 
 .section-card {
-    width: 30%;
+    width: 30%; /* Уменьшаем ширину для больших экранов */
     text-align: center;
     background-color: #f5e3d0;
     border-radius: 8px;
-    padding: 1em;  /* отступы картинок */
-
+    padding: 1em;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+    overflow: hidden; /* Не даём контенту выходить за пределы */
+    word-wrap: break-word; /* Принудительно разрываем длинные слова */
 }
 
+/* Чтобы блоки не растягивались на мобильных устройствах, добавим медиа-запрос */
+@media screen and (max-width: 768px) {
+    .section-card {
+        width: 100%; /* Блоки занимают 100% ширины на мобильных устройствах */
+        margin-bottom: 1em; /* Отступ снизу для разделения блоков */
+    }
+}
 .section-card h3 {
     color: #d97d4e;
 }
 
 .section-card p {
     color: #5c3d2e;
+    word-wrap: break-word; /* Принудительный перенос текста на новую строку */
 }
 
 /* Контакты */
