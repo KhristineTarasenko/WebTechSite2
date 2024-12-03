@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Форма для отправки</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Seoul Guide</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Начальная страница</a></li> 
+                <li><a href="index.html#seoul-info">Общая информация</a></li>
+                <li><a href="attractions.html"><img src="attractions.JPG" alt="Достопримечательности" width="20"></a></li>
+                <li><a href="https://visitseoul.net/" target="_blank">Официальный сайт туризма в Сеуле</a></li>
+                <li><a href="form.html" class="active">Форма для записи</a></li>
+                <li><a href="shop.html">Магазин</a></li>
+            </ul>
+        </nav>
+    </header>
+<h3 align="center">Формы. Отправляем данные на сервер</h3>
+
+<form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+    <p>Личные даннные<input type="hidden" name="q" value="search"></p>
+
+    <!-- Личные контактные данные -->
+    <p>Фамилия: <input type="text" name="last_name" size="20" value="Тарасенко"></p>
+    <p>Имя: <input type="text" name="first_name" size="20" value="Христина"></p>
+    <p>Группа: <input type="text" name="group" size="20" value="6"></p>
+    
+    <!-- Мобильный телефон с шаблоном для российского номера -->
+    <p>Мобильный телефон: 
+        <input type="tel" name="phone" pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" 
+               placeholder="+7 (___) ___-__-__" value="+7 (999) 123-45-67" required>
+    </p>
+
+    <!-- Электронная почта -->
+    <p>Электронная почта: <input type="email" name="email" value="khristine@example.com" required></p>
+    
+    <!-- Дата отправки сообщения -->
+    <p>Дата отправки сообщения: <input type="date" name="submission_date" value="2024-11-13" required></p>
+    
+    <!-- Отправка данных -->
+    <p>
+        <input type="Reset"  name="Reset"  value="Обновить">
+        <input type="Submit" name="submit"  value="Отправить">
+    </p>
+
+</form>
+
+<!-- Вторая форма: Отзыв и предпочтения о путешествии по Сеулу -->
+<form action="https://www.bing.com/search?" id="SeoulFeedbackForm" name="SeoulFeedbackForm" target="_blank">
+    <p>Отзыв о поездке<input type="hidden" name="q" value="search"></p>
+
+
+    <p>Имя пользователя: <input type="text" name="user_name" value="Гость" required></p>
+    
+    <!-- Числовое поле для оценки -->
+    <p>Оценка поездки (1-10): <input type="number" name="trip_rating" min="1" max="10" value="9" required></p>
+    
+    <!-- Выбор любимого места в Сеуле -->
+    <p>Любимое место в Сеуле:
+        <input type="radio" name="favorite_spot" value="Gyeongbokgung" checked>Кёнбоккун
+        <input type="radio" name="favorite_spot" value="Namsan">Намсан
+        <input type="radio" name="favorite_spot" value="Dongdaemun">Тондэмун
+    </p>
+
+    <!-- Чекбоксы с выбором, что больше всего понравилось в Сеуле -->
+    <p>Что вам понравилось:
+        <input type="checkbox" name="liked_features" value="food" checked>Корейская кухня
+        <input type="checkbox" name="liked_features" value="culture">Культура и история
+        <input type="checkbox" name="liked_features" value="nature">Природа
+        <input type="checkbox" name="liked_features" value="shopping">Шоппинг
+    </p>
+
+    <!-- Поле выбора месяца для любимого месяца путешествия -->
+    <p>Дата путешествия: <input type="date" name="travel_date" value="2024-05-01"></p>
+
+    <!-- Поле пароля для отзыва -->
+    <p>Пароль для сайта: <input type="password" name="password" value="password123" required></p>
+
+    <!-- Текстовое поле для отзыва -->
+    <p>Ваш отзыв о поездке:
+        <br>
+        <textarea name="trip_review" cols="40" rows="5">Сеул впечатлил своей культурой и ночной жизнью!</textarea>
+    </p>
+
+    <!-- Список предпочтительного типа активности -->
+    <p>Предпочтительный вид активности:
+        <select name="preferred_activity">
+            <option value="sightseeing" selected>Достопримечательности</option>
+            <option value="shopping">Шоппинг</option>
+            <option value="food_tour">Гастрономический тур</option>
+            <option value="nature">Природа</option>
+        </select>
+    </p>
+
+    <p>
+        <input type="Reset"  name="Reset"  value="Обновить">
+        <input type="Submit" name="submit"  value="Отправить">
+    </p>
+
+</form>
+
+</body>
+</html>

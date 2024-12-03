@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Достопримечательности Сеула</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Seoul Guide</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Начальная страница</a></li> 
+                <li><a href="index.html#seoul-info">Общая информация</a></li>
+                <li><a href="attractions.html" class="active"><img src="attractions.JPG" alt="Достопримечательности" width="20"></a></li>
+                <li><a href="https://visitseoul.net/" target="_blank">Официальный сайт туризма в Сеуле</a></li>
+                <li><a href="form.html">Форма для записи</a></li>
+                <li><a href="shop.html">Магазин</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Достопримечательности Сеула</h1>
+        <p>Сеул предлагает множество удивительных мест для посещения. Вот некоторые из самых известных достопримечательностей:</p>
+       <!-- Блок с изображениями достопримечательностей -->
+        <div class="attraction-images">
+            <div class="attraction-image">
+                <img src="gyeongbokgung.JPG" alt="Дворец Кёнбоккун">
+                <span class="tooltip">Дворец Кёнбоккун</span>
+            </div>
+            <div class="attraction-image">
+                <img src="hangang.JPG" alt="Парк Ханган">
+                <span class="tooltip">Парк Ханган</span>
+            </div>
+            <div class="attraction-image">
+                <img src="namsan.JPG" alt="Намсан Тауэр">
+                <span class="tooltip">Намсан Тауэр</span>
+            </div>
+        </div>
+
+        <!-- Нумерованный список -->
+        <ol>
+            <li>Дворец Кёнбоккун
+                <ul>
+                    <li>Построен в 1395 году.</li>
+                    <li>Является крупнейшим среди пяти великих дворцов Сеула.</li>
+                </ul>
+            </li>
+            <li>Парк Ханган
+                <ul>
+                    <li>Один из самых популярных парков вдоль реки Ханган.</li>
+                    <li>Идеально подходит для пикников и занятий спортом на свежем воздухе.</li>
+                </ul>
+            </li>
+            <li>Намсан Тауэр
+                <ul>
+                    <li>Популярное место для романтических встреч с видом на ночной Сеул.</li>
+                    <li>Знаменитая площадка с "замками любви" и великолепными видами.</li>
+                </ul>
+            </li>
+        </ol>
+
+       <!-- Таблица достопримечательностей -->
+       <h2>Фотографии</h2>
+       <table class="attractions-table">
+           <tr>
+               <td>
+                   <a href="gyeongbokgung.JPG" target="_blank">
+                       <img src="gyeongbokgung.JPG" alt="Дворец Кёнбоккун" class="thumbnail">
+                   </a>
+               </td>
+               <td>Дворец Кёнбоккун</td>
+           </tr>
+           <tr>
+               <td class="background-image-cell" style="background-image: url('hangang.JPG');"></td> <!-- Фоновое изображение -->
+               <td>Парк Ханган</td>
+           </tr>
+           <tr>
+               <td>
+                   <a href="namsan.JPG" target="_blank">фото</a> <!-- Текст-ссылка для Намсан Тауэр -->
+               </td>
+               <td>Намсан Тауэр</td>
+           </tr>
+       </table>
+   </main>
+
+
+    <!-- Нижний колонтитул -->
+    <footer>
+        <p>&copy; 2024 Путеводитель по Сеулу | Все права защищены</p>
+    </footer>
+</body>
+</html>

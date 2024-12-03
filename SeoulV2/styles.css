@@ -1,0 +1,330 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif; /* без засечек */
+    color: #5c3d2e;
+    background-color: #f8f4e6;
+    margin: 0; /* внешний отступ */
+    padding: 0; /* внутренний отступ */
+
+}
+
+/* Навигация */
+.navbar {
+    background-color: #e2b07e;    
+    align-items: center;
+    padding: 1em; /* внутренний отступ размером в со всех сторон элемента */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.5em; /* в 1,5 раза больше остальных шрифтов в навигации */
+    color: #5c3d2e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .nav-links a {
+    color: #5c3d2e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .nav-links .active {
+    color: #d97d4e;
+    border-bottom: 2px solid #d97d4e; 
+}
+
+.navbar .icon {
+    width: 24px; 
+    height: auto;
+    vertical-align: middle;
+}
+
+.internal-nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.internal-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.internal-nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.internal-nav a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+}
+
+.internal-nav a:hover {
+    text-decoration: underline;
+    color: #b33c00;
+}
+
+
+.thumbnail {
+    cursor: pointer;
+    border: 2px solid #8C5B3E;
+    border-radius: 5px; /* скругленние */
+    margin: 10px;
+    width: 100px;
+    height: auto;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* Стили для таблицы на странице достопримечательностей */
+.attractions-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #5c3d2e;
+    text-align: center;
+    position: relative; /* делает элемент позиционированным */
+    border: 1px solid #9b7979;
+}
+.attractions-table::before {
+    content: ""; /* псевдоэлемент для размещения фонового изображения */
+    position: absolute; /* элемент независимо от других элементов на странице */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('table-bg.JPG'); /* Фоновое изображение для таблицы */
+    background-size: cover; /* Масштабирует фоновое изображение относительно псевдоэлемента обрезая при необходимости */
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1; /* располагает фон ниже остальных элементов*/
+}
+
+.attractions-table td, /* делаем ячейки */
+.attractions-table th {
+    padding: 10px;
+    border: 1px solid #9b7979;
+}
+
+/* Фон в ячейке для парка Ханган */
+.background-image-cell {
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Устанавливаем конкретные стили для изображений в index.html */
+.index-page .section-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Стили для главного баннера на начальной странице */
+.hero {
+    position: relative; /* относительное позиционирование для элемента */
+    height: 60vh; /* 60% от видимой части экрана*/
+    display: flex; /* гибкий контейнер чтобы удобнее располагать элементы внутри контейнера*/
+    align-items: center; /* по вертикальной оси */
+    justify-content: center; /* по горизонтальной оси */
+    text-align: center;
+}
+
+.hero-bg {
+    background-image: url('seoul-bg.JPG');
+    background-size: cover; /* Масштабирует фоновое изображение обрезая при необходимости */
+    background-position: center; /* Центрирует фоновое изображение относительно элемента */
+    position: absolute; /* элемент независимо от других элементов на странице относительно position*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(6px) brightness(0.7);
+}
+
+.hero-content {
+    position: relative; /* относительное позиционирование для элемента */
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 2.5em; /*  шрифт увеличен в 2.5 раза */
+    color: #f8f4e6;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #f8f4e6;
+}
+
+/* О Сеуле */
+.about {
+    padding: 2em;
+    text-align: center;
+}
+
+.about h2 {
+    color: #5c3d2e;
+    font-size: 2em; /* внутренние отступы со всех сторон*/
+}
+
+.about-description {
+    max-width: 800px;
+    margin: 0 auto; /* центрирован по горизонтали а по бокам распределяются поровну */
+    color: #7a5230;
+    text-align: justify; /*  Выравнивает текст по ширине */
+}
+
+/* Карточки секций */
+.seoul-info-section {
+    display: flex; /* Преобразует элемент в гибкий контейнер */
+    justify-content: center; /* по горизонтальной оси */
+    gap: 1.5em; /*  промежуток между соседними элементами в 1.5em */
+    margin-top: 2em;
+}
+
+.section-card {
+    width: 30%;
+    text-align: center;
+    background-color: #f5e3d0;
+    border-radius: 8px;
+    padding: 1em;  /* отступы картинок */
+
+}
+
+.section-card h3 {
+    color: #d97d4e;
+}
+
+.section-card p {
+    color: #5c3d2e;
+}
+
+/* Контакты */
+.contacts {
+    padding: 2em;
+    background-color: #f0d9c3;
+    text-align: center;
+}
+
+.contacts h2 {
+    color: #5c3d2e;
+}
+
+.contacts p a {
+    color: #d97d4e;
+    text-decoration: none;
+}
+
+.contacts p a:hover {
+    color: #b96539;
+}
+
+/* Нижний колонтитул */
+footer {
+    background-color: #e2b07e;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+/* Стили для блока с изображениями достопримечательностей */
+.attraction-images {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-bottom: 1.5em;
+}
+
+.attraction-image {
+    position: relative;
+    width: 150px;
+    height: auto;
+}
+
+.attraction-image img {
+    width: 100%; /* Изображения будут одинакового размера */
+    height: auto;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.75); /* это уровень красного цвета, уровень зелёного цвета,уровень синего цвета, 0.75 — Уровень прозрачности */
+    color: white;
+    padding: 3px 5px;
+    font-size: 0.9em;
+    visibility: hidden; /* Скрыто по умолчанию */
+}
+
+.attraction-image:hover .tooltip {
+    visibility: visible; /* Появляется при наведении */
+}
+.card-body {
+    padding: 2em;
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style-type: none; /* Убираем точки у списка */
+    padding: 0; /* Убираем отступы у ul */
+    margin: 0; /* Убираем внешние отступы у ul */
+}
+
+.product-list li {
+    flex: 1 1 calc(33.333% - 20px); /* 3 карточки в ряд на больших экранах */
+    max-width: calc(33.333% - 20px); /* Ограничиваем ширину карточки */
+    box-sizing: border-box; /* Учитываем padding и border в ширине */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #8C5B3E;
+    padding: 1em;
+    background-color: #f5e3d0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+.product-list img {
+    width: 100%; /* Картинка будет занимать всю ширину карточки */
+    height: auto; /* Высота будет автоматически рассчитана для сохранения пропорций */
+    object-fit: contain; /* Картинка адаптируется, оставаясь полностью видимой */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product-list h5 {
+    font-size: 1.2em;
+    color: #5c3d2e;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.product-list p {
+    color: #7a5230;
+    font-size: 1em;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.amount-input {
+    width: 40px;
+}
