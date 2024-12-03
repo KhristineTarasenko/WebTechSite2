@@ -300,7 +300,29 @@ footer p {
     border-radius: 5px;
     text-align: center;
 }
+/* Медиа-запрос для экранов с шириной меньше 1200px (средние экраны, например ноутбуки) */
+@media screen and (max-width: 1200px) {
+    .product-list li {
+        flex: 1 1 calc(50% - 20px); /* 2 карточки в ряд на экранах 1200px и меньше */
+        max-width: calc(50% - 20px);
+    }
+}
 
+/* Медиа-запрос для экранов с шириной меньше 1024px (планшеты и меньше) */
+@media screen and (max-width: 1024px) {
+    .product-list li {
+        flex: 1 1 calc(50% - 20px); /* 2 карточки в ряд */
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Медиа-запрос для экранов с шириной меньше 768px (мобильные устройства) */
+@media screen and (max-width: 768px) {
+    .product-list li {
+        flex: 1 1 100%; /* 1 карточка в ряд на мобильных устройствах */
+        max-width: 100%;
+    }
+}
 
 
 .product-list img {
