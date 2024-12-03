@@ -356,7 +356,6 @@ footer p {
     text-align: center; /* Выравнивание текста по центру */
     white-space: normal; /* Даем возможность тексту переноситься */
     overflow: visible; /* Отключаем обрезку текста */
-    text-overflow: clip; /* Убираем многоточие */
 }
 
 .product-price {
