@@ -10,7 +10,11 @@ body {
 body, html {
     overflow-x: hidden; /* Отключение горизонтального скроллинга */
 }
-
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Включаем для всех элементов, чтобы учитывать отступы и границы в общей ширине */
+}
 /* Навигация */
 .navbar {
     background-color: #e2b07e;    
