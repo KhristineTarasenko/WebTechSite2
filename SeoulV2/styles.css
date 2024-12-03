@@ -351,3 +351,16 @@ footer p {
 .amount-input {
     width: 40px;
 }
+.product-description, .product-price {
+    margin-bottom: 10px; /* Отступы между элементами */
+    text-align: center; /* Выравнивание текста по центру */
+    white-space: normal; /* Даем возможность тексту переноситься */
+    overflow: visible; /* Отключаем обрезку текста */
+    text-overflow: clip; /* Убираем многоточие */
+}
+
+.product-price {
+    font-weight: bold; /* Чтобы цена была выделена */
+    color: #5c3d2e; /* Цвет для цены */
+    text-align: center; /* Выравнивание цены по центру */
+}
