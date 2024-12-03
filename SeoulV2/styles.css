@@ -123,13 +123,6 @@ body {
     position: relative;
 }
 
-/* Устанавливаем конкретные стили для изображений в index.html */
-.index-page .section-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
 /* Стили для главного баннера на начальной странице */
 .hero {
     position: relative; /* относительное позиционирование для элемента */
@@ -215,13 +208,25 @@ body {
         margin-bottom: 1em; /* Отступ снизу для разделения блоков */
     }
 }
+
+/* Стили для картинок в карточках */
+.index-page .section-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Для текстов в карточках */
 .section-card h3 {
     color: #d97d4e;
+    word-wrap: break-word; /* Перенос длинных слов в заголовках */
 }
 
 .section-card p {
     color: #5c3d2e;
-    word-wrap: break-word; /* Принудительный перенос текста на новую строку */
+    word-wrap: break-word; /* Принудительный перенос текста */
+    overflow-wrap: break-word; /* Принудительный перенос текста */
+    hyphens: auto; /* Автоматическое разбиение слов на слоги (для некоторых браузеров) */
 }
 
 /* Контакты */
