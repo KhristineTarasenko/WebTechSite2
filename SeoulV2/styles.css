@@ -300,6 +300,7 @@ footer p {
     border-radius: 5px;
     text-align: center;
 }
+
 /* Медиа-запрос для экранов с шириной меньше 1200px (средние экраны, например ноутбуки) */
 @media screen and (max-width: 1200px) {
     .product-list li {
@@ -323,7 +324,6 @@ footer p {
         max-width: 100%;
     }
 }
-
 
 .product-list img {
     width: 100%; /* Картинка будет занимать всю ширину карточки */
