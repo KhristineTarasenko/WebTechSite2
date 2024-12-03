@@ -15,7 +15,8 @@ async function getResponce() {
             <li style="width: 210px" class="d-flex flex-column m-1 p-1 border bg-body">
                 <img style="width: 180px" class="align-self-center" src="${product.img}" alt="${product.name}">
                 <h5 class="card-title">${product.name}</h5>
-                <p class="card-text">${product.description}. Цена ${product.price} р.</p>
+                <p class="product-description">${product.description}</p> <!-- Описание на одной строке -->
+                <p class="product-price">Цена: ${product.price} р.</p> <!-- Цена на отдельной строке -->
                 <input type="hidden" name="vendor_code" value="${product.vendor_code}">
                 <p class="card-text">Заказать <input class="w-25" type="number" name="amount" value="0"></p>
             </li>
