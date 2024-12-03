@@ -15,6 +15,9 @@ body, html {
 *::after {
     box-sizing: border-box; /* Включаем для всех элементов, чтобы учитывать отступы и границы в общей ширине */
 }
+.hero, .about, .contacts {
+    overflow: hidden;
+}
 /* Навигация */
 .navbar {
     background-color: #e2b07e;    
