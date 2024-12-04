@@ -376,7 +376,7 @@ footer p {
 .product-description, .product-price {
     margin-bottom: 10px; /* Отступы между элементами */
     text-align: center; /* Выравнивание текста по центру */
-    white-space: normal; /* Даем возможность тексту переноситься */
+    white-space: nowrap; /* Даем возможность тексту переноситься */
     overflow: visible; /* Отключаем обрезку текста */
 }
 
